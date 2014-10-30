@@ -1,13 +1,14 @@
 $(document).ready(function() {
 
+	$('head').append('<meta name="viewport" content="width=device-width, initial-scale=1.0" >');
 	$('body').append('<div class="inspectr" style="width:auto;height:auto;padding:10px;background:rgba(12,12,12,0.5);position:absolute;top:0;right:0;font-family:arial, sans-serif;font-size:12px;line-height:13px;color:#ffffff;min-width:200px;"></div>');
 
 
-	var dim = $(window).height() + ' x ' + $(window).width();
+	var dim = $(window).width() + ' x ' + $(window).height();
 	$('.inspectr').append('<p class="dimensions"></p>');
 	$('.dimensions').text('viewport size : ' + dim);
 	$(window).resize(function(){
-		var dim = $(window).height() + ' x ' + $(window).width();
+		var dim = $(window).width() + ' x ' + $(window).height();
 		$('.dimensions').text('viewport size : ' + dim);
 	});
 
